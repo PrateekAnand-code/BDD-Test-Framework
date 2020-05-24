@@ -75,7 +75,13 @@
             <version>1.7.30</version>
         </dependency>
 
+        <!--Yaml parsing for data parameterization-->
 
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.26</version>
+        </dependency>
 
 
     </dependencies>

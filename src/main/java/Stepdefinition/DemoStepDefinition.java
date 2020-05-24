@@ -1,6 +1,7 @@
 package Stepdefinition;
 
 import DriverUtil.WebDriverUtil;
+import Utilities.YAMLReader;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
@@ -8,6 +9,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import java.util.LinkedHashMap;
 
 public class DemoStepDefinition {
 
@@ -27,10 +30,12 @@ public class DemoStepDefinition {
         driver.get(url);
     }
 
-    @When("^I login with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void i_login_with_and(String username, String password) throws Throwable {
-     driver.findElement(By.id("username")).sendKeys(username);
-     driver.findElement(By.id("password")).sendKeys(password);
+    @When("^I login with \"([^\"]*)\"$")
+    public void i_login_credentials(String Credentials) throws Throwable {
+        YAMLReader yamlReader =new YAMLReader("src\\test\\resources\\Data\\Demo.yaml");
+        LinkedHashMap DataMap= yamlReader.GetDataSet(Credentials);
+     driver.findElement(By.id("username")).sendKeys(DataMap.get("Username").toString());
+     driver.findElement(By.id("password")).sendKeys(DataMap.get("Username").toString());
      driver.findElement( By.xpath("//*[@id=\"login\"]/button")).click();
     }
 
