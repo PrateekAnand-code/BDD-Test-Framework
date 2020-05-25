@@ -36,15 +36,15 @@ Ex
           <br><code>&lt;artifactId&gt;jsonschema2pojo-maven-plugin&lt;/artifactId&gt;</code> 
            <br><code>&lt;version&gt;1.0.2&lt;/version&gt;</code> 
           <br><code>&lt;configuration&gt;</code> 
-              <br>&ensp<code> &lt;sourceDirectory&gt;${basedir}/src/main/resources/JsonSchema&lt;/sourceDirectory&gt;</code> 
-             <br>&ensp<code> &lt;targetPackage&gt;generatedPojos&lt;/targetPackage&gt;</code> 
+            &ensp  <br><code> &lt;sourceDirectory&gt;${basedir}/src/main/resources/JsonSchema&lt;/sourceDirectory&gt;</code> 
+            &ensp <br><code> &lt;targetPackage&gt;generatedPojos&lt;/targetPackage&gt;</code> 
           <br><code>&lt;/configuration&gt;</code> 
             <br><code>&lt;executions&gt;</code> 
-              <br>&ensp<code> &lt;execution&gt;</code> 
-                  <br><code>&ensp &ensp &lt;goals&gt;</code> 
-                     <br>&ensp &ensp &ensp <code>  &lt;goal&gt;generate&lt;/goal&gt;</code> 
-                   <br>&ensp &ensp<code> &lt;/goals&gt;</code> 
-             <br>&ensp<code>&lt;/execution&gt;</code> 
+             &ensp <br><code> &lt;execution&gt;</code> 
+              &ensp &ensp    <br><code> &lt;goals&gt;</code> 
+               &ensp &ensp &ensp<br><code>  &lt;goal&gt;generate&lt;/goal&gt;</code> 
+                  &ensp &ensp <br><code> &lt;/goals&gt;</code> 
+           &ensp <br><code>&lt;/execution&gt;</code> 
           <br><code>&lt;/executions&gt;</code> 
       <br><code>&lt;/plugin&gt;</code>
 
@@ -62,7 +62,7 @@ Place the Schema at source directory (you could create json schema at <a href="h
  <br><code>APIdemoSchema Data =new APIdemoSchema();</code>
      <br><code>Data.setJob(job);</code>
         <br><code>Data.setName(name);</code>
-	Then convert the object into string Using Object Mapper and use in Restassured post body
+	<br>Then convert the object into string Using Object Mapper and use in Restassured post body
 <br><code>
  ObjectMapper objectMapper =new ObjectMapper();</code>
 <br><code>String RequestBody =objectMapper.writeValueAsString(Data);</code>
