@@ -12,18 +12,12 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.LinkedHashMap;
 
-public class DemoStepDefinition {
+public class UIDemoStepDefinition {
 
     WebDriver driver = WebDriverUtil.Webdriver();
 
-    public DemoStepDefinition() throws Exception {
+    public UIDemoStepDefinition() throws Exception {
     }
-
-    @After
-    public void teardown(){
-        driver.quit();
-    }
-
 
     @Given("^I navigate to \"([^\"]*)\"$")
     public void i_navigate_to(String url) throws Throwable {
@@ -40,7 +34,7 @@ public class DemoStepDefinition {
     }
 
     @Then("^I should see home page$")
-    public void i_should_see_home_page() throws Throwable {
+    public void i_should_see_home_page()  {
        System.out.print(driver.getTitle());
     }
 }

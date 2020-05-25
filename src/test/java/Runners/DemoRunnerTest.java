@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 
 @CucumberOptions(
-        tags = {"@Demo"},
+        tags = {"@APIDemo","@UIDemo"},
         plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
         features="src\\test\\resources\\Features",
         glue="Stepdefinition"
