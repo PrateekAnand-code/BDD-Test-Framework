@@ -31,22 +31,22 @@ Ex
 <h2>Steps to create WebService test</h2>
 <h4>Refer APIDemo.feature</h4>
 <li>Json schema to pojo creation : Specify Json schema path and tagret durectory at plugin in pom.xml</li>
-<code>&lt;plugin&gt;
-           <br>&lt;groupId&gt;org.jsonschema2pojo&lt;groupId&gt;
-          <br>&lt;artifactId&gt;jsonschema2pojo-maven-plugin&lt;/artifactId&gt;
-           <br>&lt;version&gt;1.0.2&lt;/version&gt;
-          <br>&lt;configuration&gt;
-              <br>&ensp &lt;sourceDirectory&gt;${basedir}/src/main/resources/JsonSchema&lt;/sourceDirectory&gt;
-             <br>&ensp &lt;targetPackage&gt;generatedPojos&lt;/targetPackage&gt;
-          <br>&lt;/configuration&gt;
-            <br>&lt;executions&gt;
-              <br> &ensp  &lt;execution&gt;
-                  <br>&ensp &ensp &lt;goals&gt;
-                     <br>&ensp &ensp &ensp   &lt;goal&gt;generate&lt;/goal&gt;
-                   <br>&ensp &ensp &lt;/goals&gt;
-             <br>&ensp   &lt;/execution&gt;
-          <br>&lt;/executions&gt;
-      <br>&lt;/plugin&gt;</code>
+<code>&lt;plugin&gt;</code> 
+           <br><code>&lt;groupId&gt;org.jsonschema2pojo&lt;groupId&gt;</code> 
+          <br><code>&lt;artifactId&gt;jsonschema2pojo-maven-plugin&lt;/artifactId&gt;</code> 
+           <br><code>&lt;version&gt;1.0.2&lt;/version&gt;</code> 
+          <br><code>&lt;configuration&gt;</code> 
+              <br>&ensp<code> &lt;sourceDirectory&gt;${basedir}/src/main/resources/JsonSchema&lt;/sourceDirectory&gt;</code> 
+             <br>&ensp<code> &lt;targetPackage&gt;generatedPojos&lt;/targetPackage&gt;</code> 
+          <br><code>&lt;/configuration&gt;</code> 
+            <br><code>&lt;executions&gt;</code> 
+              <br>&ensp<code> &lt;execution&gt;</code> 
+                  <br><code>&ensp &ensp &lt;goals&gt;</code> 
+                     <br>&ensp &ensp &ensp <code>  &lt;goal&gt;generate&lt;/goal&gt;</code> 
+                   <br>&ensp &ensp<code> &lt;/goals&gt;</code> 
+             <br>&ensp<code>&lt;/execution&gt;</code> 
+          <br><code>&lt;/executions&gt;</code> 
+      <br><code>&lt;/plugin&gt;</code>
 
 <li>Place json schema in source directory and run Maven 'clean generate-sources' , The pojo classes will be generated in target/generated-sources/jsonschema2pojo package.</li>
 
@@ -59,15 +59,15 @@ For the below JSON request body
 Place the Schema at source directory (you could create json schema at <a href="https://www.liquid-technologies.com/online-json-to-schema-converter" >JsontoPojoConverter> </a>) ,pojo class 'APIdemoSchema' is generated 
 
 <li>Import the generated package and use the setter methods to pass data</li>
-  <code>APIdemoSchema Data =new APIdemoSchema();
-        <br>Data.setJob(job);
-        <br>Data.setName(name);</code>
+ <br><code>APIdemoSchema Data =new APIdemoSchema();</code>
+     <br><code>Data.setJob(job);</code>
+        <br><code>Data.setName(name);</code>
 	Then convert the object into string Using Object Mapper and use in Restassured post body
-<code>
- <br>ObjectMapper objectMapper =new ObjectMapper();
-  <br>String RequestBody =objectMapper.writeValueAsString(Data);
+<br><code>
+ ObjectMapper objectMapper =new ObjectMapper();</code>
+<br><code>String RequestBody =objectMapper.writeValueAsString(Data);</code>
 
-<br>Response =
+<br><code>Response =
                 RestAssured.given().
                         contentType(ContentType.JSON).body(RequestBody).
                                         post("/users");
