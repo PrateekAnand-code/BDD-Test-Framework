@@ -36,15 +36,15 @@ Ex
           <br><code>&lt;artifactId&gt;jsonschema2pojo-maven-plugin&lt;/artifactId&gt;</code> 
            <br><code>&lt;version&gt;1.0.2&lt;/version&gt;</code> 
           <br><code>&lt;configuration&gt;</code> 
-            <<&ensp>>  <br><code> &lt;sourceDirectory&gt;${basedir}/src/main/resources/JsonSchema&lt;/sourceDirectory&gt;</code> 
-            <&ensp> <br><code> &lt;targetPackage&gt;generatedPojos&lt;/targetPackage&gt;</code> 
+              <br><code>.	&lt;sourceDirectory&gt;${basedir}/src/main/resources/JsonSchema&lt;/sourceDirectory&gt;</code> 
+             <br><code>.		&lt;targetPackage&gt;generatedPojos&lt;/targetPackage&gt;</code> 
           <br><code>&lt;/configuration&gt;</code> 
             <br><code>&lt;executions&gt;</code> 
-             <&ensp> <br><code> &lt;execution&gt;</code> 
-              <&ensp> <&ensp>    <br><code> &lt;goals&gt;</code> 
-               <&ensp> <&ensp> <&ensp><br><code>  &lt;goal&gt;generate&lt;/goal&gt;</code> 
-                  <&ensp> <&ensp> <br><code> &lt;/goals&gt;</code> 
-           <&ensp> <br><code>&lt;/execution&gt;</code> 
+              <br><code>.	&lt;execution&gt;</code> 
+                   <br><code>.		&lt;goals&gt;</code> 
+                 <br><code>.			&lt;goal&gt;generate&lt;/goal&gt;</code> 
+                    <br><code>.		&lt;/goals&gt;</code> 
+            <br><code>.	&lt;/execution&gt;</code> 
           <br><code>&lt;/executions&gt;</code> 
       <br><code>&lt;/plugin&gt;</code>
 
