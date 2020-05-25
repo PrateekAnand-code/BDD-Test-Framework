@@ -24,8 +24,8 @@
 Ex
 <code> YAMLReader yamlReader =new YAMLReader("src\\test\\resources\\Data\\Demo.yaml");</code> 
   and call 'GetDataSet(<Dataset Name>)' ,This method returns data in map
-<br><code>LinkedHashMap DataMap= yamlReader.GetDataSet("Valid login");<br>
-       <br>String username = DataMap.get("Username");</code> 
+<br><code>LinkedHashMap DataMap= yamlReader.GetDataSet("Valid login");<br></code>
+     <code>  <br>String username = DataMap.get("Username");</code> 
 
 
 <h2>Steps to create WebService test</h2>
