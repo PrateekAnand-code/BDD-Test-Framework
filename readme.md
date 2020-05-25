@@ -24,14 +24,14 @@
 Ex
 <code> YAMLReader yamlReader =new YAMLReader("src\\test\\resources\\Data\\Demo.yaml");</code> 
   and call 'GetDataSet(<Dataset Name>)' ,This method returns data in map
-<br><code>LinkedHashMap DataMap= yamlReader.GetDataSet("Valid login");<br></code>
-     <code>  <br>String username = DataMap.get("Username");</code> 
+<br><code>LinkedHashMap DataMap= yamlReader.GetDataSet("Valid login");</code>
+    <br><code>  <br>String username = DataMap.get("Username");</code> 
 
 
 <h2>Steps to create WebService test</h2>
 <h4>Refer APIDemo.feature</h4>
 <li>Json schema to pojo creation : Specify Json schema path and tagret durectory at plugin in pom.xml</li>
-<<code>&lt;plugin&gt;
+<code>&lt;plugin&gt;
            <br>&lt;groupId&gt;org.jsonschema2pojo&lt;groupId&gt;
           <br>&lt;artifactId&gt;jsonschema2pojo-maven-plugin&lt;/artifactId&gt;
            <br>&lt;version&gt;1.0.2&lt;/version&gt;
