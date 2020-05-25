@@ -31,22 +31,7 @@ Ex
 <h2>Steps to create WebService test</h2>
 <h4>Refer APIDemo.feature</h4>
 <li>Json schema to pojo creation : Specify Json schema path and tagret durectory at plugin in pom.xml</li>
-<code>&lt;plugin&gt;</code> 
-           <br><code>&lt;groupId&gt;org.jsonschema2pojo&lt;groupId&gt;</code> 
-          <br><code>&lt;artifactId&gt;jsonschema2pojo-maven-plugin&lt;/artifactId&gt;</code> 
-           <br><code>&lt;version&gt;1.0.2&lt;/version&gt;</code> 
-          <br><code>&lt;configuration&gt;</code> 
-              <br><code>.	&lt;sourceDirectory&gt;${basedir}/src/main/resources/JsonSchema&lt;/sourceDirectory&gt;</code> 
-             <br><code>.		&lt;targetPackage&gt;generatedPojos&lt;/targetPackage&gt;</code> 
-          <br><code>&lt;/configuration&gt;</code> 
-            <br><code>&lt;executions&gt;</code> 
-              <br><code>.	&lt;execution&gt;</code> 
-                   <br><code>.		&lt;goals&gt;</code> 
-                 <br><code>.			&lt;goal&gt;generate&lt;/goal&gt;</code> 
-                    <br><code>.		&lt;/goals&gt;</code> 
-            <br><code>.	&lt;/execution&gt;</code> 
-          <br><code>&lt;/executions&gt;</code> 
-      <br><code>&lt;/plugin&gt;</code>
+<img src="imgs/pluginconfig.jpg" title="Yaml data"</img>
 
 <li>Place json schema in source directory and run Maven 'clean generate-sources' , The pojo classes will be generated in target/generated-sources/jsonschema2pojo package.</li>
 
