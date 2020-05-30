@@ -9,13 +9,13 @@ import java.util.LinkedHashMap;
 ;
 
 
-public class YAMLReader {
+public class yamlReader {
     private LinkedHashMap<String,LinkedHashMap> ymlData;
     private LinkedHashMap DataSetMap;
     private String FileWithpath;
     private String filename;
 
-    public YAMLReader(String FileWithpath) {
+    public yamlReader(String FileWithpath) {
         this.FileWithpath = FileWithpath;
     }
 

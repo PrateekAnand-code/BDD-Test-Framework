@@ -1,17 +1,23 @@
 package Runners;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 
 @CucumberOptions(
-        tags = {"@APIDemo","@UIDemo"},
-        plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+        tags = {"@UIDemo"},
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         features="src\\test\\resources\\Features",
         glue="Stepdefinition"
 )
 
+
+
 @RunWith(Cucumber.class)
-public class DemoRunnerTest {
+public class demoRunnerTest {
+
+
 }
+

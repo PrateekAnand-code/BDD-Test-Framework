@@ -1,5 +1,6 @@
-Stepdefinition\APIDemoStepDefinition.class
-DriverUtil\WebDriverUtil.class
-Utilities\YAMLReader.class
+DriverUtil\webDriverUtil.class
+Stepdefinition\apiDemoStepDefinition.class
+Utilities\yamlReader.class
 generatedPojos\APIdemoSchema.class
-Stepdefinition\UIDemoStepDefinition.class
+Utilities\pageObject.class
+Stepdefinition\uiDemoStepDefinition.class

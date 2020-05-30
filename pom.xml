@@ -9,7 +9,7 @@
     <version>1.0.0</version>
 
     <properties>
-      <cucumber_version>1.2.6</cucumber_version>
+      <cucumber_version>4.8.1</cucumber_version>
       <selenium_version>3.141.59</selenium_version>
     </properties>
 
@@ -23,14 +23,17 @@
         </dependency>
 
         <!-- cucumber dependencies -->
+
+
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>${cucumber_version}</version>
         </dependency>
 
+
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumber_version}</version>
             <scope>test</scope>
@@ -57,14 +60,17 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>4.0.0</version>
+            <version>4.1.1</version>
         </dependency>
 
+
         <dependency>
-            <groupId>com.vimalselvam</groupId>
-            <artifactId>cucumber-extentsreport</artifactId>
-            <version>3.0.2</version>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports-cucumber4-adapter</artifactId>
+            <version>1.0.10</version>
+
         </dependency>
+
 
         <!--Webdriver-->
 
@@ -124,6 +130,14 @@
                     </goals>
                 </execution>
             </executions>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>7</source>
+                <target>7</target>
+            </configuration>
         </plugin>
     </plugins>
     </build>

@@ -2,9 +2,10 @@ package Stepdefinition;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
 import generatedPojos.APIdemoSchema;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -13,7 +14,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
 
 
-public class APIDemoStepDefinition {
+public class apiDemoStepDefinition {
 
     private  Response Response;
 

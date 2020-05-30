@@ -15,6 +15,15 @@
  <li>Set Browser name to be used in Framework.properties.</li> 
  <li>For driver create instance to </li>
 <code>WebDriver driver = WebDriverUtil.Webdriver();</code> 
+<br><h5>Use object reposiotry</h5>
+<li>Create object repository YAML file in following structure</li>
+<img src="imgs/yamlageobject.jpg" title = "page object"/>
+
+<li>Create Reference for page object class with driver instance and Page object YAML path</li>
+ex
+<br><code>pageObject pageObject =new pageObject(driver,"src\\test\\resources\\PageObjects\\DemoPageObject.yaml");</code>
+and call GetElement(--element key in Yaml--) .
+<br><code> pageObject.GetElement("login_button").click();</code>
 
 <h2>Steps to get data from data file</h2>
 <li>Add Data in Yaml file with Data set names</li>
@@ -26,7 +35,6 @@ Ex
   and call 'GetDataSet(<Dataset Name>)' ,This method returns data in map
 <br><code>LinkedHashMap DataMap= yamlReader.GetDataSet("Valid login");</code>
     <br><code>  <br>String username = DataMap.get("Username");</code> 
-
 
 <h2>Steps to create WebService test</h2>
 <h4>Refer APIDemo.feature</h4>
