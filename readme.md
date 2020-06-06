@@ -1,6 +1,8 @@
  <h1>BDD Test framework</h1>
 <h3>Behavior Driven Development Cucumber - Selenium , Restassured based automation framework for UI and Webservice test automation including Extent reports</h3>
 
+<h5>Contact : <a>prateekanandspet@gmail.com</a></h5>
+
 <h2>Steps to install at your system:</h2>
 	<ul>
 	<li>Clone the repository using "git clone <repository url>"</li>
