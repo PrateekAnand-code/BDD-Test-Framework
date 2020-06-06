@@ -1,8 +1,8 @@
  <h1>BDD Test framework</h1>
 <h3>Behavior Driven Development Cucumber - Selenium , Restassured based automation framework for UI and Webservice test automation including Extent reports</h3>
 
-<h5>Contact</h5> : <a href="mailto:prateekanandspet@gmail.com">prateekanandspet@gmail.com></a>
-<h5>LinkedIn </h5>: <a href="https://www.linkedin.com/in/prateekanand1/> Prateek Anand></a>
+<h5>Contact</h5> : <a href="mailto:prateekanandspet@gmail.com">prateekanandspet@gmail.com</a>
+<h5>LinkedIn</h5>: <a href="https://www.linkedin.com/in/prateekanand1/"> Prateek Anand</a>
 	
 	
 <h2>Steps to install at your system:</h2>
