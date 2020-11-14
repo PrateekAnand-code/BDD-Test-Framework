@@ -121,7 +121,9 @@
             <version>1.0.2</version>
             <configuration>
                 <sourceDirectory>${basedir}/src/main/resources/JsonSchema</sourceDirectory>
+                <outputDirectory>src/main/resources/generatedResources</outputDirectory>
                 <targetPackage>generatedPojos</targetPackage>
+
             </configuration>
             <executions>
                 <execution>

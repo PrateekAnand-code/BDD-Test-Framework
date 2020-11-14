@@ -71,4 +71,4 @@ Place the Schema at source directory (you could create json schema at <a href="h
 </code>
 
 <h2>Reports</h2>
-By default report is set to be generated at target/cucumber-reports/report.html . Update in Runner file pluggin option for custom location
+By default report is set to be generated at target/HTMLReport/ExtentHtml.html . Update test/resources/extent.properties for custom location
