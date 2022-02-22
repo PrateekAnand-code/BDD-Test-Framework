@@ -121,7 +121,7 @@
             <version>1.0.2</version>
             <configuration>
                 <sourceDirectory>${basedir}/src/main/resources/JsonSchema</sourceDirectory>
-                <outputDirectory>src/main/resources/generatedResources</outputDirectory>
+                <outputDirectory>src/main/java</outputDirectory>
                 <targetPackage>generatedPojos</targetPackage>
 
             </configuration>
@@ -137,8 +137,8 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
-                <source>7</source>
-                <target>7</target>
+                <source>8</source>
+                <target>8</target>
             </configuration>
         </plugin>
     </plugins>

@@ -14,16 +14,18 @@ import java.io.*;
 
 
 
-public class webDriverUtil {
+public class WebDriverUtil {
+    public static WebDriver Webdriver() {
+        return driver;
+    }
 
-    public static WebDriver Webdriver() throws Exception {
+   static WebDriver driver ;
+
+    public static void InitializeWebdriver() throws Exception {
 
         Properties properties =new Properties();
         properties.load(new FileInputStream("Framework.properties"));
         String browser = properties.get("Browser").toString();
-        WebDriver driver = null;
-
-
         if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -52,9 +54,6 @@ public class webDriverUtil {
             System.out.println("Selected browser value should be either firefox or chrome or ie --> Update in Configuration file is required");
             System.exit(0);
         }
-
-        return driver;
-
     }
 
 }

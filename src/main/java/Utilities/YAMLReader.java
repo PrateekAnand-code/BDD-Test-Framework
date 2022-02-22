@@ -9,13 +9,13 @@ import java.util.LinkedHashMap;
 ;
 
 
-public class yamlReader {
+public class YAMLReader {
     private LinkedHashMap<String,LinkedHashMap> ymlData;
     private LinkedHashMap DataSetMap;
     private String FileWithpath;
     private String filename;
 
-    public yamlReader(String FileWithpath) {
+    public YAMLReader(String FileWithpath) {
         this.FileWithpath = FileWithpath;
     }
 
@@ -31,6 +31,18 @@ public class yamlReader {
         }
         System.out.print(ymlData.get(DataSet));
         return ymlData.get(DataSet);
+    }
+
+    public LinkedHashMap<String,LinkedHashMap> GetDataMap(){
+        Yaml yaml =new Yaml();
+        try{
+            InputStream inputStream =new FileInputStream(FileWithpath);
+            ymlData = yaml.loadAs(inputStream,LinkedHashMap.class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.print(ymlData);
+        return ymlData;
     }
 }
 

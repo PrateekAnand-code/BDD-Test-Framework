@@ -21,6 +21,7 @@ public class apiDemoStepDefinition {
 
     @When("^I create data with \"([^\"]*)\" and \"([^\"]*)\"$")
     public void i_create_data_with_and(String name, String job) throws JsonProcessingException {
+
         APIdemoSchema Data =new APIdemoSchema();
         Data.setJob(job);
         Data.setName(name);

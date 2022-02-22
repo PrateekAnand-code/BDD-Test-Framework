@@ -1,0 +1,3 @@
+login_button :
+  accessType : xpath
+  accessValue : //*[@id="login"]/button

@@ -5,7 +5,3 @@ Username_textbox :
 password_textbox :
   accessType : id
   accessValue : password
-
-login_button :
-  accessType : xpath
-  accessValue : //*[@id="login"]/button
