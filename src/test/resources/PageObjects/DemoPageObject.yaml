@@ -1,7 +1,0 @@
-Username_textbox :
-  accessType : id
-  accessValue : username
-
-password_textbox :
-  accessType : id
-  accessValue : password
