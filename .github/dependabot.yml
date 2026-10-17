@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      cucumber:
+        patterns: ["io.cucumber:*"]
+      junit:
+        patterns: ["org.junit*:*", "org.junit.platform:*"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

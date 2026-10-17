@@ -1,7 +1,0 @@
-Valid Login :
- Username: "tomsmith"
- Password: "SuperSecretPassword!"
-
-InValid Login :
-  Username: "invalidUser"
-  Password: "pass"
