@@ -28,7 +28,7 @@ jobs:
         run: ./mvnw -B clean verify -P${{ matrix.suite }}
       - name: Upload reports and failure evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: results-${{ matrix.suite }}
           path: |
